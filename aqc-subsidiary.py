@@ -58,6 +58,7 @@ def StockchartAjax(pid):
 
 def main():
     print('=' * 50)
+    print('RongRui科技-BeoutSea  出海')
     print('Tips:请自行前往config.json 配置爱企查的Cookie')
     print('='*50)
     filename = ''
