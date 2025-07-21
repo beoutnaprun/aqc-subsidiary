@@ -97,7 +97,9 @@ def main():
                 print("下级单位-列表 - 控股大于等于：" + str(number))
                 print("*" * 50)
                 for xj_com in xj_com_data:
-                    kg_number = int(float(xj_com['regRate'].replace('%','')))
+                    if '%' not in xj_com['regRate']:
+                        break
+                    kg_number = int(float(xj_com['regRate'].replace('%','').strip()))
                     if int(number) <= kg_number:
                         print(xj_com['entName'])
                         if filename != '':
